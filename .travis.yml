@@ -1,10 +1,5 @@
-language: node_js
-
-node_js:
-  - 10.15.3
-
 rvm:
-  - 2.4.1
+  - 1.29.7
 
 install:
   - gem install bundler jekyll
