@@ -1,0 +1,22 @@
+language: node_js
+
+node_js:
+  - 10.15.3
+
+rvm:
+  - 2.4.1
+
+install:
+  - gem install bundler jekyll
+
+script:
+  - bundle install
+  - jekyll build
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GH_TOKENS
+  on:
+    branch: master
+  local_dir: _site
